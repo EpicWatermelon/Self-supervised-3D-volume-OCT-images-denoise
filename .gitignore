@@ -1,0 +1,11 @@
+/data_old
+/datasets
+/frames
+/results
+/trained
+/pretrained_model
+/.idea
+/__pycache__
+/temp.py
+/video2frame.py
+/prediction_args.py
