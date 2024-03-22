@@ -8,9 +8,12 @@ A 3D U-Net designed for the denoising of OCT volumes based on the Noise2Noise st
 Place your own OCT volume stack into a folder, then specify the folder path for data_path in train_config.yaml.
 
 ## Results
-![image](./figs/comparison_single.gif)
+### Comparison on single frame
+<img src="./figs/comparison_single.gif" width="75%" height="75%">
 
-![image](./figs/comparison_volume.gif)
+### Comparison on volume sequence
+<img src="./figs/comparison_volume.gif" width="75%" height="75%">
+
 
 ## Citation
 If this work is useful for your research, please kindly cite it:
