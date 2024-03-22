@@ -1,0 +1,80 @@
+datasets:
+  train:
+    data_path: E:\PycharmProjects\oct_denoise\3DUNet_Denoise\datasets\Rat
+    dataloader_batch_size: 1
+    dataloader_shuffle: true
+    dataset_type: n2n
+    normalize: false
+    patch_overlap: 0.25
+    patch_size_x: 32
+    patch_size_y: 32
+    patch_size_z: 16
+    rgb: false
+eval:
+  eval_epoch: 20
+init:
+  epochs: 100
+  finetune: false
+  gpu_ids:
+  - 0
+  model_dir: .\pretrained_model\denoise_model\model_epoch_1000.pth
+  save_path: .\results
+model:
+  in_chans: 1
+  net_type: unet3d
+  out_chans: 1
+path:
+  pretrained_net: null
+  root: denoising
+reconstruction:
+  img_mean: 51.6738
+  img_name: shr4mo7od2_3
+  original_shape:
+  - 100
+  - 637
+  - 697
+  start_positions:
+  - - 0
+    - 12
+    - 24
+    - 36
+    - 48
+    - 60
+    - 72
+    - 84
+  - - 0
+    - 48
+    - 96
+    - 144
+    - 192
+    - 240
+    - 288
+    - 336
+    - 384
+    - 432
+    - 480
+    - 528
+    - 573
+  - - 0
+    - 48
+    - 96
+    - 144
+    - 192
+    - 240
+    - 288
+    - 336
+    - 384
+    - 432
+    - 480
+    - 528
+    - 576
+    - 624
+    - 633
+train:
+  loss_l0_weight: 0.5
+  loss_l1_weight: 0.5
+  loss_l2_weight: 0.5
+  optimizer_beta1: 0.5
+  optimizer_beta2: 0.999
+  optimizer_lr: 0.0003
+  optimizer_type: adam

@@ -1,0 +1,59 @@
+datasets:
+  train:
+    data_path: E:\PycharmProjects\oct_denoise\3DUNet_Denoise\datasets\ICIP_test_2
+    dataloader_batch_size: 16
+    dataloader_shuffle: true
+    dataset_type: n2n
+    normalize: false
+    patch_overlap: 0.25
+    patch_size_x: 64
+    patch_size_y: 64
+    patch_size_z: 32
+    rgb: false
+eval:
+  eval_epoch: 5
+init:
+  epochs: 2000
+  gpu_ids:
+  - 0
+  name: 3D_N2N_denoise
+  save_path: .\trained
+model:
+  in_chans: 1
+  net_type: unet3d
+  out_chans: 1
+path:
+  pretrained_net: null
+  root: denoising
+reconstruction:
+  img_mean: 119.5858
+  img_name: Stack
+  original_shape:
+  - 91
+  - 300
+  - 300
+  start_positions:
+  - - 0
+    - 24
+    - 48
+    - 59
+  - - 0
+    - 48
+    - 96
+    - 144
+    - 192
+    - 236
+  - - 0
+    - 48
+    - 96
+    - 144
+    - 192
+    - 236
+train:
+  loss_l0_weight: 0.5
+  loss_l1_weight: 0.5
+  loss_l2_weight: 0.5
+  optimizer_beta1: 0.5
+  optimizer_beta2: 0.999
+  optimizer_lr: 0.0003
+  optimizer_type: adam
