@@ -1,6 +1,6 @@
 datasets:
   train:
-    data_path: E:\PycharmProjects\oct_denoise\3DUNet_Denoise\datasets\Rat
+    data_path: E:\PycharmProjects\oct_denoise\3DUNet_Denoise\datasets\[folder_name]
     dataloader_batch_size: 1
     dataloader_shuffle: true
     dataset_type: n2n
@@ -31,45 +31,8 @@ reconstruction:
   img_name: shr4mo7od2_3
   original_shape:
   - 100
-  - 637
-  - 697
   start_positions:
-  - - 0
-    - 12
-    - 24
-    - 36
-    - 48
-    - 60
-    - 72
-    - 84
-  - - 0
-    - 48
-    - 96
-    - 144
-    - 192
-    - 240
-    - 288
-    - 336
-    - 384
-    - 432
-    - 480
-    - 528
-    - 573
-  - - 0
-    - 48
-    - 96
-    - 144
-    - 192
-    - 240
-    - 288
-    - 336
-    - 384
-    - 432
-    - 480
-    - 528
-    - 576
-    - 624
-    - 633
+  - 0
 train:
   loss_l0_weight: 0.5
   loss_l1_weight: 0.5

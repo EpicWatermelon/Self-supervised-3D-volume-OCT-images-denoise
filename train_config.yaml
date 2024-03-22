@@ -1,6 +1,6 @@
 datasets:
   train:
-    data_path: E:\PycharmProjects\oct_denoise\3DUNet_Denoise\datasets\ICIP_test_2
+    data_path: E:\PycharmProjects\oct_denoise\3DUNet_Denoise\datasets\[folder_name]
     dataloader_batch_size: 16
     dataloader_shuffle: true
     dataset_type: n2n
@@ -26,29 +26,12 @@ path:
   pretrained_net: null
   root: denoising
 reconstruction:
-  img_mean: 119.5858
+  img_mean: 1
   img_name: Stack
   original_shape:
-  - 91
-  - 300
-  - 300
+    - 0
   start_positions:
-  - - 0
-    - 24
-    - 48
-    - 59
-  - - 0
-    - 48
-    - 96
-    - 144
-    - 192
-    - 236
-  - - 0
-    - 48
-    - 96
-    - 144
-    - 192
-    - 236
+    - 0
 train:
   loss_l0_weight: 0.5
   loss_l1_weight: 0.5
